@@ -1,9 +1,9 @@
 // @ts-check
 
-import { assertProposalShape } from '../../contractSupport/index.js';
+import { assertProposalShape } from '@agoric/zoe/src/contractSupport/index.js';
 
-import '../../../exported.js';
-import { LOW_FEE, SHORT_EXP } from '../../constants.js';
+import '@agoric/zoe/exported.js';
+import { LOW_FEE, SHORT_EXP } from '@agoric/zoe/src/constants.js';
 
 /**
  * @param {ContractFacet} zcf
