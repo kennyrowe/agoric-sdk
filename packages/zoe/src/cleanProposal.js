@@ -38,12 +38,13 @@ export const assertKeywordName = keyword => {
 };
 
 /**
- * @param {{[name: string]: any}} keywordRecord
+ * @param {{[name: string]: any}} uncleanKeywordRecord
  * @returns {string[]}
  */
-export const cleanKeywords = keywordRecord => {
-  assertRecord(keywordRecord, 'keywordRecord');
-  const keywords = ownKeys(keywordRecord);
+export const cleanKeywords = uncleanKeywordRecord => {
+  harden(uncleanKeywordRecord);
+  assertRecord(uncleanKeywordRecord, 'keywordRecord');
+  const keywords = ownKeys(uncleanKeywordRecord);
 
   // Assert all names are ascii identifiers starting with
   // an upper case letter.
