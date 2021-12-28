@@ -804,7 +804,7 @@ const makePatternKit = () => {
   });
 
   /** @type {MatchHelper} */
-  const matchMapOfHelper = Far('match:recordOf helper', {
+  const matchMapOfHelper = Far('match:mapOf helper', {
     checkMatches: (specimen, [keyPatt, valuePatt], check = x => x) =>
       check(
         passStyleOf(specimen) === 'tagged' && getTag(specimen) === 'copyMap',
