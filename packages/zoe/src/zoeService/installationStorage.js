@@ -13,8 +13,9 @@ export const makeInstallationStorage = (chargeZoeFee, installFeeAmount) => {
   const installations = new WeakSet();
 
   /**
-   * Create an installation by permanently storing the bundle. It will be
-   * evaluated each time it is used to make a new instance of a contract.
+   * Create an installation by permanently storing the bundle. The code will be
+   * evaluated once when creating a zcfZygote, then the start() function will be
+   * called each time an instance is started.
    */
   /** @type {InstallFeePurseRequired} */
   const install = async (bundle, feePurse) => {
